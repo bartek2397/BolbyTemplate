@@ -1,0 +1,138 @@
+.recent {
+
+    .links {
+
+        .categories {
+            @include resetList;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                color: $mainFontColor;
+                font-weight: 700;
+                font-size: 14px;
+
+                &:hover {
+                    color: $btnBgColor;
+                }
+            }
+        }
+    }
+    
+
+    .tiles {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 20px 0;
+
+        .singleTile {
+            width: 30%;
+            margin: 0 15px;
+            
+            position: relative;
+
+            a {
+                border-radius: 15px;
+
+                &:hover h4 {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                &:hover .mask {
+                    opacity: 0.8;
+                }
+                &:hover .category {
+                    transform: translateY(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &:hover .moreButton{
+                    opacity: 1;
+                }
+            }
+
+             
+                h4 {
+                    position: absolute;
+                    top: 20px;
+                    left: 30px;
+                    z-index: 3;
+                    color: $tileTitleColor;
+                    opacity: 0;
+                    transition: 300ms;
+                    font-size: 24px;
+                    transform: translateY(30px);
+                }
+                
+                .mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: #6C6CE5;
+                    transition: 300ms;
+                    border-radius: 15px;
+                }
+
+                .category {
+                    position: absolute;
+                    top: 0;
+                    z-index: 3;
+                    left: 50px;
+                    display: block;
+                    width: 40px;
+                    height: 25px;
+                    background-color: $tileCategoryBgColor;
+                    font-size: 14px;
+                    color: $tileCategoryFontColor;
+                    border-radius: 0 0 7px 7px;
+                    text-align: center;
+                    padding: 5px 0;
+                    font-weight: 500;
+                    transform: translateY(-25px);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 300ms;
+                }
+
+                .moreButton {
+                    color: #FFF;
+                        font-size: 20px;
+                        display: block;
+                        background: #FFD15C;
+                        border-radius: 100%;
+                        height: 40px;
+                        line-height: 42px;
+                        text-align: center;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                        z-index: 3;
+                        width: 40px;
+                        opacity: 0;
+                        transition: 300ms;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                padding: 10px;
+                
+            }
+        }
+    }
+    .btnTiles {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        padding: 10px;
+    }
+
+    
+
+

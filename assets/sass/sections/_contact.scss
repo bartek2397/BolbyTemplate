@@ -1,0 +1,62 @@
+.contact {
+    padding: 80px 0;
+
+    .formBox {
+        display: flex;
+        justify-content: space-between;
+
+        .header {
+            width: 50%;
+
+            &::after {
+                content: '';
+                width: 37px;
+                height: 37px;
+                display: block;
+                background-image:  url(../../img/map-bg.svg);
+                position: absolute;
+                top: -10px;
+                left: -10px;
+            }
+        }
+
+        .form {
+            width: 50%;
+
+            .row {
+                width: 100%;
+                padding: 30px 0;
+                display: flex;
+
+                input {
+                    margin: 10px;
+                    border: 0;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    padding: 15px 0;
+                }
+                textarea {
+                    margin: 0 10px;
+                    margin: 10px;
+                    border: 0;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    padding: 15px 0;
+                    resize: vertical;
+                    width: 100%;
+                }
+
+                input#input-person, input#input-mail {
+                    width: 50%;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        .btnSubmit {
+            text-align: center;
+            padding: 10px 0;
+            width: 150px;
+        }
+    }
+}

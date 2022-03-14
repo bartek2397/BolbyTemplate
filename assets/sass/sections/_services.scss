@@ -1,0 +1,85 @@
+.services {
+    margin: 0 0 60px 0;
+
+    .serviceList {
+        display: flex;
+        margin: 40px 0;
+        width: 100%;
+
+        .service1 {
+            width: calc(100% / 3);
+            text-align: center;
+            margin: 0 auto;
+            background-color: $serviceOneBgColor;
+            padding: 30px;
+            margin: 0 15px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px 0px rgba(108, 108, 229, 0.5);
+            color: $OddServiceFontColor;
+            @include forTablet {
+                width: 50%;
+                margin: 15px 0;
+            }
+            @include forMobile {
+                width: 100%;
+            }
+        }
+
+        .service2 {
+            width: calc(100% / 3);
+            text-align: center;
+            margin: 0 auto;
+            background-color: $serviceTwoBgColor;
+            padding: 30px;
+            margin: 0 15px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px 0px rgba(249, 215, 76, 0.5);
+            color: $SecondServiceFontColor;
+            @include forTablet {
+                width: 50%;
+                margin: 15px 0;
+            }
+            @include forMobile {
+                width: 100%;
+            }
+        }
+        .service3 {
+            width: calc(100% / 3);
+            text-align: center;
+            margin: 0 auto;
+            background-color: $serviceThreeBgColor;
+            padding: 30px;
+            margin: 0 15px;
+            border-radius: 20px;
+            box-shadow: 0px 5px 20px 0px rgba(249, 123, 140, 0.5);
+            color: $OddServiceFontColor;
+
+            @include forTablet {
+                width: 100%;
+                margin: 0;
+            }
+            @include forMobile {
+                width: 100%;
+                margin: 15px 0;
+            }
+        }
+        
+        @include forTablet {
+            flex-wrap: wrap;
+        }
+    }
+
+
+    p {
+        text-align: center;
+        margin: 30px;
+
+        a {
+            color: $btnBgColor;
+
+            &:hover {
+                color: $mainFontColor;
+            }
+        }
+    }
+}
